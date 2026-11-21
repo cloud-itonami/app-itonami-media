@@ -16,7 +16,7 @@ thing you are reporting about.
 
 ## What in this repository is security-relevant
 
-`media.itonami.cloud` serves media assets for the itonami plane. The relevant
+`media.itonami.app` serves media assets for the itonami plane. The relevant
 surfaces are what may be uploaded, what is served to whom, and whether a URL
 alone grants access to something that was meant to be scoped.
 

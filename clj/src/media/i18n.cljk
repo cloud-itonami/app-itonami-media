@@ -1,5 +1,5 @@
 (ns media.i18n
-  "Language support for the medium. media.gftd.ai renders a B-framed brief in the
+  "Language support for the medium. media.itonami.app renders a B-framed brief in the
   subject's (or source's) language, so the A→B medium spans language gaps too.
   Registry = ISO 639-1 (180+ codes, well over the 100-language target). Pure: the
   TS shell uses lang-directive to steer the litellm generation and stores the

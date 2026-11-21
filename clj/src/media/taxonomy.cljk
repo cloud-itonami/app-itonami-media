@@ -6,7 +6,7 @@
 
 (defn- ->js [x] #?(:cljs (clj->js x) :clj x))
 
-;; Genre desks (path DIDs did:web:media.gftd.ai:genre:{genre}).
+;; Genre desks (path DIDs did:web:media.itonami.app:genre:{genre}).
 (def genres
   #{"tech" "policy" "labor" "markets" "incident" "culture" "local" "science"})
 

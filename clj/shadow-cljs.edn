@@ -1,4 +1,4 @@
-;; media.gftd.ai edge-worker core build — pure A→B medium logic to an ES module.
+;; media.itonami.app edge-worker core build — pure A→B medium logic to an ES module.
 {:deps   {:aliases [:cljs]}
  :builds {:worker
           {:target     :esm

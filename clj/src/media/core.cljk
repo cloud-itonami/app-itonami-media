@@ -1,5 +1,5 @@
 (ns media.core
-  "Pure media.gftd.ai core — the A→B medium logic, compiled to an ES module by
+  "Pure media.itonami.app core — the A→B medium logic, compiled to an ES module by
   shadow-cljs and called from ../src/app.cljc. No async IO: app.cljc owns fetch, the
   magatama SDK and Web Crypto (sha256 → subject/link ids). These fns validate,
   build the kotoba Datomic EDN tx/query payloads for subjects (B) and links
@@ -25,10 +25,10 @@
       (str/replace #"^-+|-+$" "")))
 
 (defn desk-writer-did
-  "did:web:media.gftd.ai:genre:{genre} — the genre desk's attribution DID."
+  "did:web:media.itonami.app:genre:{genre} — the genre desk's attribution DID."
   [genre]
   (let [g (slugify genre)]
-    (if (str/blank? g) "did:web:media.gftd.ai" (str "did:web:media.gftd.ai:genre:" g))))
+    (if (str/blank? g) "did:web:media.itonami.app" (str "did:web:media.itonami.app:genre:" g))))
 
 ;; ── EDN tx construction ─────────────────────────────────────────────────────
 

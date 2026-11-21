@@ -8,7 +8,7 @@
 >
 > | 面 | 中身 | 配信 |
 > |---|---|---|
-> | **A→B link medium** | 下記のとおり。news = A、media = A→B のエッジ | `media.itonami.cloud`（build は通る。deploy は未実施 —— 下記の前提条件が未達） |
+> | **A→B link medium** | 下記のとおり。news = A、media = A→B のエッジ | `media.itonami.app`（build は通る。deploy は未実施 —— 下記の前提条件が未達） |
 > | **kouryaku 攻略データ** | ゲームのキャラクター/ステージ/アイテムと出現関係の EDN コーパス + 公開面。`kouryaku/README.md` が正本 | `kouryaku.itonami.cloud` |
 >
 > **2026-08-09: link medium の build は通るようになった。** `main` が存在しない
@@ -41,7 +41,7 @@
 
 ---
 
-# media.gftd.ai — the A→B medium
+# media.itonami.app — the A→B medium
 
 Companion to news.gftd.ai (ADR-2606161200 split). **news = A** (primary-source
 collection); **media = the medium** that attaches the directed A→B edge.
@@ -63,7 +63,7 @@ news :news/source ──Follow──▶ media.onCommit
   → candidateSubjects (A→B ranking, bridge score)   [media.link / media.score, CLJS]
   → linkSourceToSubject (create scored :media.link)
   → generateBrief (B-framed, grounded in A)          [litellm]
-  → publishLink (post as did:web:media.gftd.ai:genre:{genre}, reconcile postUri)
+  → publishLink (post as did:web:media.itonami.app:genre:{genre}, reconcile postUri)
 ```
 
 `autopilot` runs all four for one source. Heavy multi-subject linking / entity
@@ -95,7 +95,7 @@ Multi-language: each brief renders in the subject's (or source's) language —
 - Storage = kotoba Datomic via kotobase.net. media graph = `media-link-v1`
   (links + subjects); reads A from `news-intel-v1`. media is a registered kotoba
   **operator** (KOTOBASE_OPERATOR_DIDS) so it may `datomic.transact`.
-- Genre desks = path DIDs `did:web:media.gftd.ai:genre:{tech|policy|labor|markets}`.
+- Genre desks = path DIDs `did:web:media.itonami.app:genre:{tech|policy|labor|markets}`.
 
 ## Boundary (consensys-pattern)
 

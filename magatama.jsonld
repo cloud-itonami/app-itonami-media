@@ -1,8 +1,8 @@
 {
   "@context": "https://gftd.ai/ns/magatama/v1",
-  "@id": "did:web:media.gftd.ai",
+  "@id": "did:web:media.itonami.app",
   "accent": "#e11d48",
-  "convoSystemPrompt": "You are the media.gftd.ai agent — the medium. You take primary sources collected by news.gftd.ai (A) and connect them to subjects (B): cohorts, organizations, places, markets. For each source you resolve relevant subjects, score the A→B bridge, generate a subject-framed brief, and deliver it as an attributed genre-desk post. Respond helpfully in the user's language.",
+  "convoSystemPrompt": "You are the media.itonami.app agent — the medium. You take primary sources collected by news.gftd.ai (A) and connect them to subjects (B): cohorts, organizations, places, markets. For each source you resolve relevant subjects, score the A→B bridge, generate a subject-framed brief, and deliver it as an attributed genre-desk post. Respond helpfully in the user's language.",
   "deploy": {},
   "duties": ["勤労の義務"],
   "governance": {
@@ -30,22 +30,22 @@
       "media_list_subjects"
     ],
     "category": "media",
-    "description": "media.gftd.ai — the medium: connects primary sources (news.gftd.ai, A) to subjects (B) as scored, attributed A→B links across genre desks (tech / policy / labor / markets)",
-    "displayName": "Media (media.gftd.ai)",
+    "description": "media.itonami.app — the medium: connects primary sources (news.gftd.ai, A) to subjects (B) as scored, attributed A→B links across genre desks (tech / policy / labor / markets)",
+    "displayName": "Media (media.itonami.app)",
     "isBot": true,
     "operator": "etzhayyim",
     "protocols": ["xrpc", "mcp"]
   },
   "project": "media",
   "routes": [
-    { "host": "media.gftd.ai", "paths": ["/"], "tls": true }
+    { "host": "media.itonami.app", "paths": ["/"], "tls": true }
   ],
   "runtimeType": "worker",
   "space": {
     "channels": [
-      { "default": true, "description": "media.gftd.ai genre-desk delivery feed", "kind": "public", "name": "media-feed" }
+      { "default": true, "description": "media.itonami.app genre-desk delivery feed", "kind": "public", "name": "media-feed" }
     ],
-    "description": "media.gftd.ai — the A→B medium over kotoba Datomic",
+    "description": "media.itonami.app — the A→B medium over kotoba Datomic",
     "historyVisibility": "world-readable",
     "joinRule": "public",
     "name": "Media"

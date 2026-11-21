@@ -9,7 +9,7 @@
   // hooks.itonami.cloud / mcp.itonami.cloud に揃えてある。
   //
   // 同じ repo の `../wrangler.jsonc`（A→B link medium）は
-  // media.itonami.cloud を取るので、こちらは kouryaku を名乗る。
+  // media.itonami.app を取るので、こちらは kouryaku を名乗る。
   //
   // deploy:
   //   npm run kouryaku:publish            # site/ を生成
