@@ -1,5 +1,5 @@
 {:paths ["src"]
- ;; media.gftd.ai — the A→B medium core (pure .cljc → shadow-cljs :esm).
+ ;; media.itonami.app — the A→B medium core (pure .cljc → shadow-cljs :esm).
  :deps
  {
         ;; kotoba.test (clojure.test-compatible surface), not clojure.test --

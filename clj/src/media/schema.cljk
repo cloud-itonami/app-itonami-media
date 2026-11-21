@@ -1,5 +1,5 @@
 (ns media.schema
-  "Datomic attribute schema for media.gftd.ai — the A→B medium graph.
+  "Datomic attribute schema for media.itonami.app — the A→B medium graph.
 
   Two entity classes plus the reified medium edge:
    - :media.subject/*  = B (recipient): cohort | org | place | market | …
@@ -32,7 +32,7 @@
     :media.link/subjectId   ; → B  (:media.subject/id)
     :media.link/title       ; rendering: B-framed headline
     :media.link/brief       ; rendering: B-framed body (grounded in A)
-    :media.link/writerDid   ; did:web:media.gftd.ai:genre:{genre}
+    :media.link/writerDid   ; did:web:media.itonami.app:genre:{genre}
     :media.link/bridgeScores ; EDN-string map {inequalityBridge … actionability}
     :media.link/arbitrage   ; social-arbitrage score (0-100)
     :media.link/relevance   ; A→B relevance (0-100)

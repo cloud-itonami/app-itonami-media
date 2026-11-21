@@ -1,4 +1,4 @@
-// media.gftd.ai — the A→B medium (ADR-2606161200 split: news=A, media=medium).
+// media.itonami.app — the A→B medium (ADR-2606161200 split: news=A, media=medium).
 //
 // Takes primary sources collected by news.gftd.ai (A) and connects them to
 // subjects (B): resolve candidate subjects, score the A→B bridge, generate a
@@ -204,7 +204,7 @@ async function hGenerateBrief(_sdk: HostSDK, env: Env, body: Uint8Array): Promis
       const desk = media.deskProfile(genre);
       const deskSteer = desk ? `Audience: ${desk.audience}. Tone: ${desk.tone}.` : "";
       const out = await llmComplete(env,
-        `You are the ${genre} desk of media.gftd.ai. Connect the primary source to the subject audience. ${deskSteer} ${media.langDirective(lang)} Output exactly two lines: line 1 = a headline framed for the subject; line 2 = a 1-2 sentence brief, source-grounded, no speculation.`,
+        `You are the ${genre} desk of media.itonami.app. Connect the primary source to the subject audience. ${deskSteer} ${media.langDirective(lang)} Output exactly two lines: line 1 = a headline framed for the subject; line 2 = a 1-2 sentence brief, source-grounded, no speculation.`,
         `Subject (B): ${a.subjectLabel ?? link["media.link/subjectId"]}\nSource (A): ${src?.title ?? ""} — ${src?.url ?? ""}\n${src?.summary ?? src?.text ?? ""}`.slice(0, 4000));
       const lines = out.split("\n").map((s) => s.trim()).filter(Boolean);
       title = title || (lines[0] ?? src?.title ?? "");
